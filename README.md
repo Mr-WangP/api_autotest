@@ -1,2 +1,2 @@
 # api_autotest
-rerquests+excel+unittest
+python + requests + excel + unittest
