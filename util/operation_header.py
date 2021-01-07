@@ -1,7 +1,7 @@
 # coding=utf-8
 import json
-from api_test.util.operation_json import OperationJson
-from api_test.base.runmethod import RunMethod
+from api_autotest.util.operation_json import OperationJson
+from api_autotest.base.runmethod import RunMethod
 
 
 class OperationHeader:
