@@ -1,11 +1,11 @@
 # coding=utf-8
 import unittest
-from api_autotest.base.runmethod import RunMethod
-from api_autotest.data.get_data import GetData
-from api_autotest.util.common_util import CommonUtil
-from api_autotest.data.dependent_data import DependentData
-from api_autotest.util.operation_header import OperationHeader
-from api_autotest.util.operation_json import OperationJson
+from base.runmethod import RunMethod
+from data.get_data import GetData
+from util.common_util import CommonUtil
+from data.dependent_data import DependentData
+from util.operation_header import OperationHeader
+from util.operation_json import OperationJson
 
 
 class RunTest(unittest.TestCase):

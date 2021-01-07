@@ -1,7 +1,7 @@
 # coding=utf-8
-from api_autotest.util.operation_excel import OperationExcel
-from api_autotest.base.runmethod import RunMethod
-from api_autotest.data.get_data import GetData
+from util.operation_excel import OperationExcel
+from base.runmethod import RunMethod
+from data.get_data import GetData
 from jsonpath_rw import jsonpath, parse
 import json
 

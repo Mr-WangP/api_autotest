@@ -1,7 +1,7 @@
 # coding=utf-8
-from api_autotest.util.operation_excel import OperationExcel
-from api_autotest.data import data_config
-from api_autotest.util.operation_json import OperationJson
+from util.operation_excel import OperationExcel
+from data import data_config
+from util.operation_json import OperationJson
 import json
 
 
