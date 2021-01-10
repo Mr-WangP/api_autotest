@@ -108,7 +108,7 @@ class GetData:
 
     def write_test_result(self, row, text):
         """
-        写入结果数据
+        写入测试结果
         :param row:
         :param col:
         :return:
@@ -154,3 +154,23 @@ class GetData:
             return None
         else:
             return data
+
+    def get_datas(self):
+        """
+        获取所有用例
+        :return:
+        """
+        datas = []
+        rows = self.get_case_lines()
+        for r in range(1, rows):
+            data = self.opera_excel.get_row_value(r)
+            datas.append(data)
+        return tuple(datas)
+
+
+if __name__ == '__main__':
+    data = GetData()
+    print(data.get_datas())
+    datas = data.get_datas()
+    datas = tuple(datas)
+    print(datas)

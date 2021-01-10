@@ -107,7 +107,10 @@ class OperationExcel:
 
 if __name__ == '__main__':
     opera = OperationExcel()
+
+    print(opera.data)
     opera.get_data()
+    print(opera.get_data())
     print(opera.get_data().nrows)        # 获取表格总行数
     print(opera.get_lines())             # 获取表格总行数
     print(opera.get_cell_value(1, 2))    # 获取第2行、第3列单元格数据
@@ -115,5 +118,5 @@ if __name__ == '__main__':
     print(opera.get_row_num('case2'))    # 获取id为case2的行数
     print(opera.get_row_value(2))        # 获取第3行数据
     print(opera.get_cols_data(2))        # 获取第3列数据
-    opera.write_value(3, 2, '模块2')
-    print(opera.get_cell_value(2, 1))
+    # opera.write_value(3, 2, '模块2')
+    # print(opera.get_cell_value(2, 1))
