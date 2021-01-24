@@ -29,7 +29,6 @@ if __name__ == '__main__':
         "password": "123456"
     }
     run_method = RunMethod()
-    # res = json.dumps(requests.post(url, data).json())
     res = run_method.run_main('Post', url, data)
     op = OperationHeader(res)
     op.write_token()

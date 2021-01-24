@@ -2,17 +2,12 @@
 import time
 import unittest
 from HTMLTestRunner import HTMLTestRunner
-import logging
 # from util.send_mail import SendMail
 from util.log import LOG
 
-# logging.basicConfig(filename='log/{}_log'.format(time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime())),
-#                     level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-# logger = logging.getLogger(__name__)
-
 
 def run():
-    # logger.info("开始执行！")
+
     LOG().log('log').info("开始执行！")
     # 指定测试用例为当前文件夹下的 test_cases 目录
     test_dir = './test_cases'
@@ -23,7 +18,7 @@ def run():
     runner = HTMLTestRunner(stream=fp, title='接口自动化测试报告', description="运行环境：requests, unittest")
     runner.run(suit)
     fp.close()
-    # logger.info("运行结束，生成测试报告！")
+
     LOG().log('log').info("运行结束，生成测试报告！")
     # 发送邮件
     # send_email = SendMail()

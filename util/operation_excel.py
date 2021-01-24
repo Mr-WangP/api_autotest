@@ -55,7 +55,6 @@ class OperationExcel:
         """
         book = openpyxl.load_workbook(self.file_name)
         sheet_data = book.worksheets[self.sheet_id]
-        # sheet_data = book.get_sheet_by_name(sheet_name[self.sheet_id])
         sheet_data.cell(row+1, col+1).value = text
         book.save(self.file_name)
 

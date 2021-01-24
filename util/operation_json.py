@@ -18,9 +18,8 @@ class OperationJson:
         :param file_name:文件路径
         :return:
         """
-        with open(self.file_path) as fp:
+        with open(self.file_path, 'r') as fp:
             data = json.load(fp)
-        fp.close()
         return data
 
     def get_data(self, id):
@@ -31,7 +30,6 @@ class OperationJson:
     def write_data(self, data):
         with open("../dataconfig/token.json", 'w') as fp:
             fp.write(json.dumps(data))
-        fp.close()
 
 
 if __name__ == '__main__':

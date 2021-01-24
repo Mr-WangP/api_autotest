@@ -74,6 +74,7 @@ def get_result():
     """获取返回结果"""
     return global_val.result
 
+
 def get_test_result():
     """获取返回结果"""
     return global_val.test_result
