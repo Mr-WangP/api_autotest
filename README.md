@@ -1,2 +1,2 @@
 # api_autotest
-python + rerquests + excel + unittest
+python + rerquests + excel + pytest + allure
