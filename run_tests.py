@@ -1,28 +1,29 @@
-# coding=utf-8
-import time
-import unittest
-from HTMLTestRunner import HTMLTestRunner
-# from util.send_mail import SendMail
-from util.log import LOG
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Author: wp
+# @Time: 2021/5/23 22:17
+# @File: operation_excel.py
+
+
+import os
+from conftest import log
+import pytest
+from config import RunConfig
 
 
 def run():
 
-    LOG().log('log').info("开始执行！")
-    # 指定测试用例为当前文件夹下的 test_cases 目录
-    test_dir = './test_cases'
-    suit = unittest.defaultTestLoader.discover(test_dir, pattern='test*.py')
-    now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
-    file_path = './report/' + now_time + '_result.html'
-    fp = open(file_path, mode='wb')
-    runner = HTMLTestRunner(stream=fp, title='接口自动化测试报告', description="运行环境：requests, unittest")
-    runner.run(suit)
-    fp.close()
+    log().info("测试开始执行！")
 
-    LOG().log('log').info("运行结束，生成测试报告！")
-    # 发送邮件
-    # send_email = SendMail()
-    # send_email.send_mail(file_path)
+    pytest.main(["-v", RunConfig.cases_path,
+                 "--alluredir", './temp/',
+                 "--clean-alluredir",
+                 "--maxfail", RunConfig.max_fail,
+                 "--reruns", RunConfig.rerun,
+                 "--reruns-delay", "2"])
+
+    os.system('allure generate ./temp/ -o ./report/ --clean')
+    log().info("运行结束，生成测试报告！")
 
 
 if __name__ == '__main__':
