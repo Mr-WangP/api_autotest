@@ -1,0 +1,2 @@
+INFO     logger:test_api.py:51 开始发送case3请求
+INFO     logger:test_api.py:62 case3请求发送成功

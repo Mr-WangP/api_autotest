@@ -6,7 +6,8 @@
 
 
 import os
-import pytest
+import json
+import jsonpath
 import logging
 import time
 from config import RunConfig
@@ -16,6 +17,18 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPORT_DIR = os.path.join(BASE_DIR, "report", "")
 LOG_DIR = os.path.join(BASE_DIR, "log", "")
 
+
+# 响应结果数据处理
+def get_text(res, key):
+    try:
+        txt = json.loads(res)
+        value = jsonpath.jsonpath(txt, '$..{0}'.format(key))
+        #jsonpath库默认获取的结果为list类型，如果没有获取到则返回false
+        if len(value) == 1:
+            return value[0]
+        return value
+    except:
+        return False
 
 def log():
     # 创建一个日志器

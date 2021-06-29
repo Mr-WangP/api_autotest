@@ -5,68 +5,70 @@
 # @File: test_api.py
 
 
+import json
 import pytest
 from base.method import RunMethod
-from util.get_data import GetData
-from util.dependent_data import DependentData
-from util.operation_header import OperationHeader
-from util.operation_json import OperationJson
+from data.get_data import GetData
 from config import RunConfig
-import json
+from conftest import get_text, log
 
 
 class Test_Api:
 
-    @pytest.mark.parametrize('args', GetData(RunConfig.file_path, RunConfig.sheet_id).get_datas())
+    @pytest.mark.parametrize('args', GetData(RunConfig.file_path).read_excel())
     def test_case(self, args):
-        row = int(args[0][-1])
-        is_run = args[3]
-        if is_run == 'yes':
+        row = int(args[0][4:])
+        col = len(args)
+
+        #判断是否跳过测试
+        if args[3] == 'yes':
             url = args[2]
             method = args[4]
-            request_data = args[9]
-            expect = args[10]
-            header = args[5]
+            headers = args[5]
+            if headers is not None:
+                headers = json.loads(args[5])
             depend_case = args[6]
-            request_data = json.loads(request_data)
+            request_data = json.loads(args[9])
+            expect = args[10]
 
-            if 'case' in depend_case:
-                depend_data = DependentData(depend_case, RunConfig.file_path, RunConfig.sheet_id)
-                # 获取依赖的响应数据
-                depend_response_data = depend_data.get_data_for_key(row)
+            #获取依赖用例的数据
+            if depend_case:
+                depend_data = GetData(RunConfig.file_path).read_excel()
+                depend_data = depend_data[int(args[6][4:]) - 1]
+                depend_res = RunMethod().run_method(method=depend_data[4], url=depend_data[2], data=json.loads(depend_data[9]), headers=depend_data[5])
+                depend_res = depend_res.text
                 # 获取依赖的key
-                depend_key = GetData(RunConfig.file_path, RunConfig.sheet_id).get_depend_field(row)
+                depend_key = args[8]
+                # 获取依赖的响应数据
+                depend_response_data = get_text(depend_res, depend_key)
                 # 更新请求字段
-                request_data[depend_key] = depend_response_data
-            # 如果header字段值为write则将该接口的返回的token写入到token.json文件，如果为yes则直接读取token.json文件
-            if header == "write":
-                res = RunMethod().run_main(method, url, request_data)
-                op_header = OperationHeader(res)
-                op_header.write_token()
-            elif header == 'yes':
-                op_json = OperationJson(RunConfig.token_file)
-                token = op_json.get_data('data')
-                # 把请求数据与登录token合并，并作为请求数据
-                request_data = dict(request_data, **token)
+                if args[7] == 'header':
+                    headers[depend_key] = depend_response_data
+                elif args[7] == 'data':
+                    request_data[depend_key] = depend_response_data
 
-                res = RunMethod().run_main(method, url, request_data)
-            else:
-                res = RunMethod().run_main(method, url, request_data)
+            #获取响应
+            log().info("开始发送{0}请求".format(args[0]))
+            res = RunMethod().run_method(method=method, url=url, data=request_data, headers=headers)
+            res = str(res.json())
 
-            if expect:
-                if res in expect:
-                    GetData(RunConfig.file_path, RunConfig.sheet_id).write_result(row, res)
-                    GetData(RunConfig.file_path, RunConfig.sheet_id).write_test_result(row, "Pass")
-                else:
-                    GetData(RunConfig.file_path, RunConfig.sheet_id).write_result(row, res)
-                    GetData(RunConfig.file_path, RunConfig.sheet_id).write_test_result(row, 'Fail')
-            else:
-                print(f"用例ID：case-{row}，预期结果不能为空")
+            #写入响应结果
+            GetData(RunConfig.file_path).write_excel(row + 1, col - 1, res)
 
-            assert res in expect
+            #断言
+            try:
+                assert expect == res
+                GetData(RunConfig.file_path).write_excel(row + 1, col, "Pass")
+                log().info("{0}请求发送成功".format(args[0]))
+                return True
+            except:
+                GetData(RunConfig.file_path).write_excel(row + 1, col, 'Fail')
+                log().info('{0}断言失败，{1}不等于{2}'.format(args[0], expect, res))
+                return False
+
         else:
-            # 跳过测试
-            GetData(RunConfig.file_path, RunConfig.sheet_id).write_test_result(row, "Skip")
+            log().info("跳过{0}请求".format(args[0]))
+            GetData(RunConfig.file_path).write_excel(row + 1, col, "Skip")
 
 
 if __name__ == '__main__':

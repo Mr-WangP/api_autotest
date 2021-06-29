@@ -15,7 +15,7 @@ def run():
 
     log().info("测试开始执行！")
 
-    pytest.main(["-v", RunConfig.cases_path,
+    pytest.main(["-vs", RunConfig.cases_path,
                  "--alluredir", './temp/',
                  "--clean-alluredir",
                  "--maxfail", RunConfig.max_fail,

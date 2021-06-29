@@ -19,7 +19,3 @@ class RunConfig:
 
     # 选择测试数据文件
     file_path = os.path.join(PRO_PATH, "data", "case.xlsx")
-    # 选择测试数据文件的表单
-    sheet_id = 0
-    # 选择接口请求的token文件
-    token_file = os.path.join(PRO_PATH, "data", "token.json")

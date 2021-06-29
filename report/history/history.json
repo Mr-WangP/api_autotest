@@ -9,12 +9,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "9d98d5af67cecbf7",
+      "uid" : "2cd5d6383d90d08e",
       "status" : "passed",
       "time" : {
-        "start" : 1621834559556,
-        "stop" : 1621834560484,
-        "duration" : 928
+        "start" : 1624945984412,
+        "stop" : 1624945986569,
+        "duration" : 2157
       }
     } ]
   },
@@ -28,32 +28,31 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "fe611f0b6be4c7c7",
+      "uid" : "7e9db1ebd5a2783c",
       "status" : "passed",
       "time" : {
-        "start" : 1621834559530,
-        "stop" : 1621834559554,
-        "duration" : 24
+        "start" : 1624945984395,
+        "stop" : 1624945984409,
+        "duration" : 14
       }
     } ]
   },
   "66cd46e631576915eaa17757beb315b9" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "b009693f5bad7f11",
-      "status" : "failed",
-      "statusDetails" : "AssertionError: assert '{\\n  \"city\": \"柳州\",\\n  \"cityEn\": \"liuzhou\",\\n  \"cityid\": \"101300301\",\\n  \"country\": \"中国\",\\n  \"countryEn\": \"China\",\\n  ...风\"\\n      ],\\n      \"win_meter\": \"\",\\n      \"win_speed\": \"<3级\"\\n    }\\n  ],\\n  \"update_time\": \"2021-05-24 12:19:34\"\\n}' in '{\\n  \"city\": \"柳州\",\\n  \"cityEn\": \"liuzhou\",\\n  \"cityid\": \"101300301\",\\n  \"country\": \"中国\",\\n  \"countryEn\": \"China\",\\n  ...      \"北风\",\\n        \"北风\"\\n      ],\\n      \"win_speed\": \"3-4级\"\\n    }\\n  ],\\n  \"update_time\": \"2021-01-05 16:10:35\"\\n}'",
+      "uid" : "5441027fef4ac46f",
+      "status" : "passed",
       "time" : {
-        "start" : 1621834563098,
-        "stop" : 1621834563474,
-        "duration" : 376
+        "start" : 1624945986725,
+        "stop" : 1624945986981,
+        "duration" : 256
       }
     } ]
   },
@@ -67,12 +66,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "f8b8a8ebe1da74ca",
+      "uid" : "962cec2695b606ca",
       "status" : "passed",
       "time" : {
-        "start" : 1621834560488,
-        "stop" : 1621834560659,
-        "duration" : 171
+        "start" : 1624945986572,
+        "stop" : 1624945986722,
+        "duration" : 150
       }
     } ]
   }
