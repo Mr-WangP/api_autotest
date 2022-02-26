@@ -6,8 +6,8 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 0,
-      "passed" : 4,
+      "skipped" : 1,
+      "passed" : 3,
       "unknown" : 0,
       "total" : 4
     }

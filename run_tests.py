@@ -6,9 +6,16 @@
 
 
 import os
-from conftest import log
 import pytest
 from config import RunConfig
+from logs.log import log
+
+'''
+说明：
+1、用例创建原则，按照data目录下excel表格中格式写入接口请求信息。
+2、运行方式：
+  > python run_tests.py
+'''
 
 
 def run():

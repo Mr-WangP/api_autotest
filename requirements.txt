@@ -1,0 +1,8 @@
+allure-pytest==2.9.43
+pytest==6.2.4
+pytest-ordering==0.6
+pytest-rerunfailures==10.0
+pytest-xdist==2.3.0
+requests==2.25.1
+openpyxl==3.0.7
+jsonpath==0.82

@@ -1,4 +1,15 @@
 {
-  "total" : 4,
-  "items" : [ ]
+  "total" : 1,
+  "items" : [ {
+    "uid" : "79453783d38cda5ee41dc8227780e8bc",
+    "name" : "接口请求测试",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
 }

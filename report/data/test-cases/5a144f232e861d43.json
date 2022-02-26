@@ -1,0 +1,150 @@
+{
+  "uid" : "5a144f232e861d43",
+  "name" : "test_case[args0]",
+  "fullName" : "test_cases.test_api.Test_Api#test_case",
+  "historyId" : "7467c0f33d3afd40b34521a02538fa6c",
+  "time" : {
+    "start" : 1645883609965,
+    "stop" : 1645883609983,
+    "duration" : 18
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: 跳过case1请求",
+  "statusTrace" : "('G:\\\\work_python\\\\api_autotest_3\\\\test_cases\\\\test_api.py', 110, 'Skipped: 跳过case1请求')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1645883609964,
+      "stop" : 1645883609964,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1645883609964,
+      "stop" : 1645883609964,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "Skipped: 跳过case1请求",
+    "statusTrace" : "('G:\\\\work_python\\\\api_autotest_3\\\\test_cases\\\\test_api.py', 110, 'Skipped: 跳过case1请求')",
+    "steps" : [ {
+      "name" : "获取接口请求id",
+      "time" : {
+        "start" : 1645883609965,
+        "stop" : 1645883609965,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "跳过该接口请求",
+      "time" : {
+        "start" : 1645883609965,
+        "stop" : 1645883609983,
+        "duration" : 18
+      },
+      "status" : "skipped",
+      "statusMessage" : "Skipped: 跳过case1请求\n",
+      "statusTrace" : "  File \"G:\\work_python\\api_autotest_3\\test_cases\\test_api.py\", line 110, in test_case\n    pytest.skip(\"跳过{0}请求\".format(args[0]))\n  File \"D:\\Python37\\lib\\site-packages\\_pytest\\outcomes.py\", line 139, in skip\n    raise Skipped(msg=msg, allow_module_level=allow_module_level)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "9427aeec478cb56b",
+      "name" : "log",
+      "source" : "9427aeec478cb56b.txt",
+      "type" : "text/plain",
+      "size" : 156
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "api测试"
+  }, {
+    "name" : "feature",
+    "value" : "接口请求测试"
+  }, {
+    "name" : "tag",
+    "value" : "api"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Api"
+  }, {
+    "name" : "host",
+    "value" : "WP"
+  }, {
+    "name" : "thread",
+    "value" : "12396-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "args",
+    "value" : "['case1', '车站查询接口', 'https://api.binstd.com/train/station2s', 'no', 'get', None, None, None, None, '{\"appkey\": \"935a981af6aec3b9\", \"start\": \"武汉\", \"end\": \"杭州\", \"ishigh\": \"0\"}', '{\\n  \"msg\": \"ok\",\\n  \"result\": {\\n    \"date\": \"2021-01-05\",\\n    \"end\": \"杭州\",\\n    \"list\": [\\n      {\\n        \"arrivaltime\": \"22:47\",\\n        \"costtime\": \"4小时47分\",\\n        \"day\": 1,\\n        \"departuretime\": \"18:00\",\\n        \"distance\": 1158,\\n        \"endstation\": \"杭州东\",\\n        \"isend\": 1,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": 264,\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": \"-\",\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": 423,\\n        \"priceyw1\": \"-\",\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": \"-\",\\n        \"sequenceno\": 12,\\n        \"station\": \"汉口\",\\n        \"trainno\": \"D2264\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"D\",\\n        \"typename\": \"动车\"\\n      },\\n      {\\n        \"arrivaltime\": \"07:16\",\\n        \"costtime\": \"12小时55分\",\\n        \"day\": 2,\\n        \"departuretime\": \"18:21\",\\n        \"distance\": 0,\\n        \"endstation\": \"杭州南\",\\n        \"isend\": 0,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 348.5,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 222.5,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": 128.5,\\n        \"sequenceno\": 9,\\n        \"station\": \"武昌\",\\n        \"trainno\": \"K121\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"K\",\\n        \"typename\": \"快速\"\\n      },\\n      {\\n        \"arrivaltime\": \"10:23\",\\n        \"costtime\": \"15小时5分\",\\n        \"day\": 2,\\n        \"departuretime\": \"19:18\",\\n        \"distance\": 0,\\n        \"endstation\": \"杭州南\",\\n        \"isend\": 0,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 372.5,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 238.5,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": 138.5,\\n        \"sequenceno\": 5,\\n        \"station\": \"汉口\",\\n        \"trainno\": \"K254\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"K\",\\n        \"typename\": \"快速\"\\n      },\\n      {\\n        \"arrivaltime\": \"08:31\",\\n        \"costtime\": \"12小时52分\",\\n        \"day\": 2,\\n        \"departuretime\": \"19:39\",\\n        \"distance\": 0,\\n        \"endstation\": \"杭州南\",\\n        \"isend\": 0,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 348.5,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 222.5,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": 128.5,\\n        \"sequenceno\": 11,\\n        \"station\": \"武昌\",\\n        \"trainno\": \"K353\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"K\",\\n        \"typename\": \"快速\"\\n      },\\n      {\\n        \"arrivaltime\": \"06:59\",\\n        \"costtime\": \"8小时36分\",\\n        \"day\": 2,\\n        \"departuretime\": \"22:23\",\\n        \"distance\": 0,\\n        \"endstation\": \"杭州\",\\n        \"isend\": 1,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 301,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 194,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": 112,\\n        \"sequenceno\": 1,\\n        \"station\": \"武昌\",\\n        \"trainno\": \"Z45\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"Z\",\\n        \"typename\": \"直达特快\"\\n      },\\n      {\\n        \"arrivaltime\": \"06:47\",\\n        \"costtime\": \"7小时53分\",\\n        \"day\": 2,\\n        \"departuretime\": \"22:54\",\\n        \"distance\": 918,\\n        \"endstation\": \"杭州南\",\\n        \"isend\": 0,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 301,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 194,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": \"-\",\\n        \"sequenceno\": 4,\\n        \"station\": \"武昌\",\\n        \"trainno\": \"Z255\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"Z\",\\n        \"typename\": \"直达特快\"\\n      }\\n    ],\\n    \"start\": \"武汉\"\\n  },\\n  \"status\": 0\\n}', None, 'Skip']"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "api" ]
+  },
+  "source" : "5a144f232e861d43.json",
+  "parameterValues" : [ "['case1', '车站查询接口', 'https://api.binstd.com/train/station2s', 'no', 'get', None, None, None, None, '{\"appkey\": \"935a981af6aec3b9\", \"start\": \"武汉\", \"end\": \"杭州\", \"ishigh\": \"0\"}', '{\\n  \"msg\": \"ok\",\\n  \"result\": {\\n    \"date\": \"2021-01-05\",\\n    \"end\": \"杭州\",\\n    \"list\": [\\n      {\\n        \"arrivaltime\": \"22:47\",\\n        \"costtime\": \"4小时47分\",\\n        \"day\": 1,\\n        \"departuretime\": \"18:00\",\\n        \"distance\": 1158,\\n        \"endstation\": \"杭州东\",\\n        \"isend\": 1,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": 264,\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": \"-\",\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": 423,\\n        \"priceyw1\": \"-\",\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": \"-\",\\n        \"sequenceno\": 12,\\n        \"station\": \"汉口\",\\n        \"trainno\": \"D2264\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"D\",\\n        \"typename\": \"动车\"\\n      },\\n      {\\n        \"arrivaltime\": \"07:16\",\\n        \"costtime\": \"12小时55分\",\\n        \"day\": 2,\\n        \"departuretime\": \"18:21\",\\n        \"distance\": 0,\\n        \"endstation\": \"杭州南\",\\n        \"isend\": 0,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 348.5,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 222.5,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": 128.5,\\n        \"sequenceno\": 9,\\n        \"station\": \"武昌\",\\n        \"trainno\": \"K121\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"K\",\\n        \"typename\": \"快速\"\\n      },\\n      {\\n        \"arrivaltime\": \"10:23\",\\n        \"costtime\": \"15小时5分\",\\n        \"day\": 2,\\n        \"departuretime\": \"19:18\",\\n        \"distance\": 0,\\n        \"endstation\": \"杭州南\",\\n        \"isend\": 0,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 372.5,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 238.5,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": 138.5,\\n        \"sequenceno\": 5,\\n        \"station\": \"汉口\",\\n        \"trainno\": \"K254\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"K\",\\n        \"typename\": \"快速\"\\n      },\\n      {\\n        \"arrivaltime\": \"08:31\",\\n        \"costtime\": \"12小时52分\",\\n        \"day\": 2,\\n        \"departuretime\": \"19:39\",\\n        \"distance\": 0,\\n        \"endstation\": \"杭州南\",\\n        \"isend\": 0,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 348.5,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 222.5,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": 128.5,\\n        \"sequenceno\": 11,\\n        \"station\": \"武昌\",\\n        \"trainno\": \"K353\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"K\",\\n        \"typename\": \"快速\"\\n      },\\n      {\\n        \"arrivaltime\": \"06:59\",\\n        \"costtime\": \"8小时36分\",\\n        \"day\": 2,\\n        \"departuretime\": \"22:23\",\\n        \"distance\": 0,\\n        \"endstation\": \"杭州\",\\n        \"isend\": 1,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 301,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 194,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": 112,\\n        \"sequenceno\": 1,\\n        \"station\": \"武昌\",\\n        \"trainno\": \"Z45\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"Z\",\\n        \"typename\": \"直达特快\"\\n      },\\n      {\\n        \"arrivaltime\": \"06:47\",\\n        \"costtime\": \"7小时53分\",\\n        \"day\": 2,\\n        \"departuretime\": \"22:54\",\\n        \"distance\": 918,\\n        \"endstation\": \"杭州南\",\\n        \"isend\": 0,\\n        \"pricedw\": \"-\",\\n        \"pricedw1\": \"-\",\\n        \"priceed\": \"-\",\\n        \"pricegr1\": \"-\",\\n        \"pricegr2\": \"-\",\\n        \"priceqt\": \"-\",\\n        \"pricerw1\": 301,\\n        \"pricerw2\": \"-\",\\n        \"pricerz\": \"-\",\\n        \"pricesw\": \"-\",\\n        \"pricetd\": \"-\",\\n        \"pricewz\": \"-\",\\n        \"priceyd\": \"-\",\\n        \"priceyw1\": 194,\\n        \"priceyw2\": \"-\",\\n        \"priceyw3\": \"-\",\\n        \"priceyz\": \"-\",\\n        \"sequenceno\": 4,\\n        \"station\": \"武昌\",\\n        \"trainno\": \"Z255\",\\n        \"trainno12306\": \"\",\\n        \"type\": \"Z\",\\n        \"typename\": \"直达特快\"\\n      }\\n    ],\\n    \"start\": \"武汉\"\\n  },\\n  \"status\": 0\\n}', None, 'Skip']" ]
+}

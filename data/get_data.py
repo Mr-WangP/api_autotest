@@ -43,3 +43,6 @@ if __name__ == '__main__':
     print(data.read_excel())
     print(len(data.read_excel()))
     print(data.read_excel()[3])
+    print("---------")
+    print(data.read_excel()[3][9])
+    print(type(data.read_excel()[3][9]))

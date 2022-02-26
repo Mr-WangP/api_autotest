@@ -1,1 +1,0 @@
-INFO     logger:test_api.py:70 跳过case1请求
