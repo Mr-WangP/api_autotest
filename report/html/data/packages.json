@@ -1,0 +1,191 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test_cases.test_api",
+    "children" : [ {
+      "name" : "正确用户名密码进行登陆",
+      "uid" : "534e83cb4bdc1a9b",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856534688,
+        "stop" : 1658856534775,
+        "duration" : 87
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "不同用户进行登陆",
+      "uid" : "da08182cd90e5d2b",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856534775,
+        "stop" : 1658856534865,
+        "duration" : 90
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "密码错误进行登陆",
+      "uid" : "1411d963872d8c7c",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856534865,
+        "stop" : 1658856534965,
+        "duration" : 100
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "用户名为空进行登陆",
+      "uid" : "917fab1382f9bf47",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856534965,
+        "stop" : 1658856535055,
+        "duration" : 90
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "密码为空进行登陆",
+      "uid" : "714786b05869e0d6",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535055,
+        "stop" : 1658856535145,
+        "duration" : 90
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "密码特殊字符进行登录",
+      "uid" : "622f374637422324",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535145,
+        "stop" : 1658856535245,
+        "duration" : 100
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "密码中文字符进行登录",
+      "uid" : "68f7d60a98362217",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535255,
+        "stop" : 1658856535345,
+        "duration" : 90
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "查询个人用户信息",
+      "uid" : "aced0ee3505144d",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535350,
+        "stop" : 1658856535435,
+        "duration" : 85
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "token错误进行查询",
+      "uid" : "69c539364ef9a794",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535440,
+        "stop" : 1658856535535,
+        "duration" : 95
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "查询不存在的用户",
+      "uid" : "bdef55f0bb25bbf",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535535,
+        "stop" : 1658856535625,
+        "duration" : 90
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "token为空",
+      "uid" : "a0e85e7732e49200",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535625,
+        "stop" : 1658856535715,
+        "duration" : 90
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "token为特殊字符",
+      "uid" : "e0c53ebcd35de111",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535715,
+        "stop" : 1658856535815,
+        "duration" : 100
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "添加商品到购物车",
+      "uid" : "2bdb99889a5bb5c9",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535815,
+        "stop" : 1658856535907,
+        "duration" : 92
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "成功创建订单",
+      "uid" : "fe3f951a45da7f67",
+      "parentUid" : "4250abd75893d2534cfe34302f8b6923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658856535907,
+        "stop" : 1658856535995,
+        "duration" : 88
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "test_cases.test_api"
+  } ]
+}

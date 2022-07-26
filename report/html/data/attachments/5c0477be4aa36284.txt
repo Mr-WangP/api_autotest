@@ -1,0 +1,12 @@
+INFO     logger:test_api.py:30 ————————case8————————
+INFO     logger:test_api.py:44 ✅ 获取接口请求id：case8 
+INFO     logger:test_api.py:49 ✅ 获取case8接口请求名称：查询个人用户信息 
+INFO     logger:test_api.py:59 ✅ 获取case8接口请求url：http://39.98.138.157:5000/api/getuserinfo 
+INFO     logger:test_api.py:63 ✅ 获取case8接口请求类型：get 
+INFO     logger:test_api.py:67 ✅ 获取case8接口请求头参数headers：{"token": all_val['VAR_TOKEN']} 
+INFO     logger:test_api.py:71 ✅ 获取case8接口请求参数：None 
+INFO     logger:test_api.py:95 ✅ 获取case8接口请求响应结果：{'data': [{'nikename': '风清扬', 'openid': 'UEHUXUXU78272SDSassDD', 'userbalance': 5678.9, 'userid': 17890, 'username': 'admin', 'userpoints': 4321}], 'httpstatus': 200} 
+INFO     logger:test_api.py:111 ✅ 获取case8接口请求响应JSON提取结果：{'VAR_TOKEN': '23657DGYUSGD126731638712GE18271H', 'VAR_OP': 'UEHUXUXU78272SDSassDD', 'VAR_UID': 17890} 
+INFO     logger:test_api.py:117 ✅ 获取case8接口请求响应字段'$..nikename'的预期结果：风清扬 
+INFO     logger:test_api.py:123 ✅ 获取case8接口请求响应字段'$..nikename'的实际结果写入excel：风清扬 
+INFO     logger:test_api.py:130 ✅ 获取case8接口请求响应断言成功，写入接口测试结果为'Pass'

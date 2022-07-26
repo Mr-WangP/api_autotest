@@ -1,0 +1,168 @@
+2022-07-27-01:28:53 run_tests.py run INFO 测试开始执行！
+2022-07-27-01:28:54 test_api.py test_case INFO ————————case1————————
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取接口请求id：case1 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求名称：正确用户名密码进行登陆 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求url：http://39.98.138.157:5000/api/login 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求类型：post 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求头参数headers：{"Content-Type": "application/json"} 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求参数：{"username": "admin", "password": "123456"} 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求响应结果：{'adress': {'city': 'changsha'}, 'httpstatus': 200, 'info': {'age': 18, 'name': 'admin'}, 'msg': 'success', 'token': '23657DGYUSGD126731638712GE18271H'} 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求响应JSON提取结果：{'VAR_TOKEN': '23657DGYUSGD126731638712GE18271H'} 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求响应字段'$..msg'的预期结果：success 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求响应字段'$..msg'的实际结果写入excel：success 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case1接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:54 test_api.py test_case INFO ————————case2————————
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取接口请求id：case2 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求名称：不同用户进行登陆 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求url：http://39.98.138.157:5000/api/login 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求类型：post 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求头参数headers：None 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求参数：{"username": "zz", "password": "123456"} 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求响应结果：{'code': '001', 'msg': '用户名或密码错误'} 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求响应字段'$..msg'的预期结果：用户名或密码错误 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求响应字段'$..msg'的实际结果写入excel：用户名或密码错误 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case2接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:54 test_api.py test_case INFO ————————case3————————
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取接口请求id：case3 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求名称：密码错误进行登陆 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求url：http://39.98.138.157:5000/api/login 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求类型：post 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求头参数headers：None 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求参数：{"username": "admin", "password": "123"} 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求响应结果：{'code': '001', 'msg': '用户名或密码错误'} 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求响应字段'$..msg'的预期结果：用户名或密码错误 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求响应字段'$..msg'的实际结果写入excel：用户名或密码错误 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case3接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:54 test_api.py test_case INFO ————————case4————————
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取接口请求id：case4 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case4接口请求名称：用户名为空进行登陆 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case4接口请求url：http://39.98.138.157:5000/api/login 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case4接口请求类型：post 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case4接口请求头参数headers：None 
+2022-07-27-01:28:54 test_api.py test_case INFO ✅ 获取case4接口请求参数：{"username": "", "password": "123456"} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case4接口请求响应结果：{'code': '001', 'msg': '用户名或密码错误'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case4接口请求响应字段'$..msg'的预期结果：用户名或密码错误 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case4接口请求响应字段'$..msg'的实际结果写入excel：用户名或密码错误 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case4接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case5————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case5 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求名称：密码为空进行登陆 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求url：http://39.98.138.157:5000/api/login 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求类型：post 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求头参数headers：None 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求参数：{"username": "admin", "password": ""} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求响应结果：{'code': '001', 'msg': '用户名或密码错误'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求响应字段'$..msg'的预期结果：用户名或密码错误 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求响应字段'$..msg'的实际结果写入excel：用户名或密码错误 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case5接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case6————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case6 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求名称：密码特殊字符进行登录 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求url：http://39.98.138.157:5000/api/login 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求类型：post 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求头参数headers：None 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求参数：{"username": "admin", "password": "1234$$%56"} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求响应结果：{'code': '001', 'msg': '用户名或密码错误'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求响应字段'$..msg'的预期结果：用户名或密码错误 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求响应字段'$..msg'的实际结果写入excel：用户名或密码错误 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case6接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case7————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case7 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求名称：密码中文字符进行登录 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求url：http://39.98.138.157:5000/api/login 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求类型：post 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求头参数headers：None 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求参数：{"username": "admin", "password": "123中文456"} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求响应结果：{'code': '001', 'msg': '用户名或密码错误'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求响应字段'$..msg'的预期结果：用户名或密码错误 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求响应字段'$..msg'的实际结果写入excel：用户名或密码错误 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case7接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case8————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case8 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求名称：查询个人用户信息 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求url：http://39.98.138.157:5000/api/getuserinfo 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求类型：get 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求头参数headers：{"token": all_val['VAR_TOKEN']} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求参数：None 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求响应结果：{'data': [{'nikename': '风清扬', 'openid': 'UEHUXUXU78272SDSassDD', 'userbalance': 5678.9, 'userid': 17890, 'username': 'admin', 'userpoints': 4321}], 'httpstatus': 200} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求响应JSON提取结果：{'VAR_TOKEN': '23657DGYUSGD126731638712GE18271H', 'VAR_OP': 'UEHUXUXU78272SDSassDD', 'VAR_UID': 17890} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求响应字段'$..nikename'的预期结果：风清扬 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求响应字段'$..nikename'的实际结果写入excel：风清扬 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case8接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case9————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case9 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求名称：token错误进行查询 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求url：http://39.98.138.157:5000/api/getuserinfo 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求类型：get 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求头参数headers：{"token": '21111DGYUSGD126731638712GE18271H'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求参数：None 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求响应结果：{'code': '1000', 'msg': '用户信息不正确！'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求响应字段'$..msg'的预期结果：用户信息不正确！ 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求响应字段'$..msg'的实际结果写入excel：用户信息不正确！ 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case9接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case10————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case10 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求名称：查询不存在的用户 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求url：http://39.98.138.157:5000/api/getuserinfo 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求类型：get 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求头参数headers：{"token": '22234DGYUSGD126731638712GE18271H'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求参数：None 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求响应结果：{'code': '1000', 'msg': '用户信息不正确！'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求响应字段'$..msg'的预期结果：用户信息不正确！ 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求响应字段'$..msg'的实际结果写入excel：用户信息不正确！ 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case10接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case11————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case11 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求名称：token为空 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求url：http://39.98.138.157:5000/api/getuserinfo 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求类型：get 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求头参数headers：{"token": ''} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求参数：None 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求响应结果：{'code': '1000', 'msg': '用户信息不正确！'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求响应字段'$..msg'的预期结果：用户信息不正确！ 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求响应字段'$..msg'的实际结果写入excel：用户信息不正确！ 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case11接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case12————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case12 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求名称：token为特殊字符 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求url：http://39.98.138.157:5000/api/getuserinfo 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求类型：get 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求头参数headers：{"token": '23657DGYUS%$#@&***712GE18271H'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求参数：None 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求响应结果：{'code': '1000', 'msg': '用户信息不正确！'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求响应字段'$..msg'的预期结果：用户信息不正确！ 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求响应字段'$..msg'的实际结果写入excel：用户信息不正确！ 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case12接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case13————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case13 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求名称：添加商品到购物车 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求url：http://39.98.138.157:5000/api/addcart 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求类型：post 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求头参数headers：{"token": all_val['VAR_TOKEN']} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求参数：{"openid": all_val['VAR_OP'], "productid": 8888, "userid": all_val['VAR_UID']} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求响应结果：{'data': [{'cartid': 45233, 'openid': 'UEHUXUXU78272SDSassDD', 'price': 29.9, 'productid': 8888, 'userid': 17890}], 'httpstatus': 200, 'result': 'success'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求响应JSON提取结果：{'VAR_TOKEN': '23657DGYUSGD126731638712GE18271H', 'VAR_OP': 'UEHUXUXU78272SDSassDD', 'VAR_UID': 17890, 'VAR_CART': 45233, 'VAR_PRD': 8888} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求响应字段'$..result'的预期结果：success 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求响应字段'$..result'的实际结果写入excel：success 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case13接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:55 test_api.py test_case INFO ————————case14————————
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取接口请求id：case14 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求名称：成功创建订单 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求url：http://39.98.138.157:5000/api/createorder 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求类型：post 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求头参数headers：{"token": all_val['VAR_TOKEN']} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求参数：{"cartid": all_val['VAR_CART'], "openid": all_val['VAR_OP'], "productid": all_val['VAR_PRD'], "userid": all_val['VAR_UID']} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求响应结果：{'data': [{'openid': 'UEHUXUXU78272SDSassDD', 'orderid': 23441289, 'orderprice': 129.9, 'productid': 8888, 'productnum': 1, 'userid': 17890}], 'httpstatus': 200, 'result': 'success'} 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求响应字段'$..result'的预期结果：success 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求响应字段'$..result'的实际结果写入excel：success 
+2022-07-27-01:28:55 test_api.py test_case INFO ✅ 获取case14接口请求响应断言成功，写入接口测试结果为'Pass' 
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary INFO ————————测试总结————————
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary INFO 成功用例数: 14
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary ERROR 异常用例数: 0
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary ERROR 失败用例数: 0
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary WARNING 跳过用例数: 0
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary WARNING 预期失败用例数: 0
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary WARNING 预期成功用例数: 0
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary INFO 用例执行时长: 1.71s
+2022-07-27-01:28:56 conftest.py pytest_terminal_summary INFO 用例成功率: 100.00%
+2022-07-27-01:28:57 run_tests.py run INFO 运行结束，生成测试报告！

@@ -1,0 +1,141 @@
+[ {
+  "uid" : "714786b05869e0d6",
+  "name" : "密码为空进行登陆",
+  "time" : {
+    "start" : 1658856535055,
+    "stop" : 1658856535145,
+    "duration" : 90
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "622f374637422324",
+  "name" : "密码特殊字符进行登录",
+  "time" : {
+    "start" : 1658856535145,
+    "stop" : 1658856535245,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "68f7d60a98362217",
+  "name" : "密码中文字符进行登录",
+  "time" : {
+    "start" : 1658856535255,
+    "stop" : 1658856535345,
+    "duration" : 90
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "69c539364ef9a794",
+  "name" : "token错误进行查询",
+  "time" : {
+    "start" : 1658856535440,
+    "stop" : 1658856535535,
+    "duration" : 95
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e0c53ebcd35de111",
+  "name" : "token为特殊字符",
+  "time" : {
+    "start" : 1658856535715,
+    "stop" : 1658856535815,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aced0ee3505144d",
+  "name" : "查询个人用户信息",
+  "time" : {
+    "start" : 1658856535350,
+    "stop" : 1658856535435,
+    "duration" : 85
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "a0e85e7732e49200",
+  "name" : "token为空",
+  "time" : {
+    "start" : 1658856535625,
+    "stop" : 1658856535715,
+    "duration" : 90
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2bdb99889a5bb5c9",
+  "name" : "添加商品到购物车",
+  "time" : {
+    "start" : 1658856535815,
+    "stop" : 1658856535907,
+    "duration" : 92
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "bdef55f0bb25bbf",
+  "name" : "查询不存在的用户",
+  "time" : {
+    "start" : 1658856535535,
+    "stop" : 1658856535625,
+    "duration" : 90
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1411d963872d8c7c",
+  "name" : "密码错误进行登陆",
+  "time" : {
+    "start" : 1658856534865,
+    "stop" : 1658856534965,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "917fab1382f9bf47",
+  "name" : "用户名为空进行登陆",
+  "time" : {
+    "start" : 1658856534965,
+    "stop" : 1658856535055,
+    "duration" : 90
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "da08182cd90e5d2b",
+  "name" : "不同用户进行登陆",
+  "time" : {
+    "start" : 1658856534775,
+    "stop" : 1658856534865,
+    "duration" : 90
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "534e83cb4bdc1a9b",
+  "name" : "正确用户名密码进行登陆",
+  "time" : {
+    "start" : 1658856534688,
+    "stop" : 1658856534775,
+    "duration" : 87
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "fe3f951a45da7f67",
+  "name" : "成功创建订单",
+  "time" : {
+    "start" : 1658856535907,
+    "stop" : 1658856535995,
+    "duration" : 88
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+} ]
