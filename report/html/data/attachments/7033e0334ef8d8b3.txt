@@ -1,0 +1,5 @@
+ERROR    logger:conftest.py:39 文件类型错误：F:\work_python\api_autotest\data\__init__.py
+INFO     logger:test_api.py:26 ————————运行case1————————
+INFO     logger:test_api.py:40 ✅ 获取接口请求id：case1 
+INFO     logger:test_api.py:45 ✅ 获取case1接口请求名称：车站查询接口 
+INFO     logger:test_api.py:154 ✅ 跳过case1接口请求，写入接口测试结果为'Skip'

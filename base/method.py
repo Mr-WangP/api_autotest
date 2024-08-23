@@ -19,8 +19,8 @@ class RunMethod:
 
     # get请求封装
     @allure.step("发送get请求")
-    def get_method(self, url, params=None, **kwargs):
-        return requests.get(url=url, params=params, **kwargs)
+    def get_method(self, url, **kwargs):
+        return requests.get(url=url, **kwargs)
 
     # 响应结果数据处理，从响应结果中获取某个字段的值
     def get_text(self, res, key):

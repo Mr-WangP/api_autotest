@@ -7,7 +7,7 @@
 
 import os
 import pytest
-from common.config import RunConfig
+from config import RunConfig
 from utils.LogUtils.log import log
 
 '''
@@ -22,10 +22,16 @@ def run():
 
     log().info("测试开始执行！")
 
-    pytest.main([RunConfig.cases_path,
-                 "--maxfail", RunConfig.max_fail,
-                 "--reruns", RunConfig.rerun,
-                 "--reruns-delay", "2"])
+    pytest.main(
+        [
+            "-vs", RunConfig.cases_path,
+            "--alluredir", './report/temp/',
+            "--clean-alluredir",
+            "--maxfail", RunConfig.max_fail,
+            "--reruns", RunConfig.rerun,
+            "--reruns-delay", "2"
+        ]
+    )
 
     os.system('allure generate ./report/temp/ -o ./report/html/ --clean')
     log().info("运行结束，生成测试报告！")

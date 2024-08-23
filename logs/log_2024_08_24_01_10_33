@@ -1,0 +1,40 @@
+2024-08-24-01:10:33 run_tests.py run INFO 测试开始执行！
+2024-08-24-01:10:34 conftest.py excel_data ERROR 文件类型错误：F:\work_python\api_autotest\data\__init__.py
+2024-08-24-01:10:34 test_api.py test_case INFO ————————运行case1————————
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取接口请求id：case1 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case1接口请求名称：车站查询接口 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 跳过case1接口请求，写入接口测试结果为'Skip' 
+2024-08-24-01:10:34 test_api.py test_case INFO ————————运行case2————————
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取接口请求id：case2 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求名称：手机号码归属地查询接口 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求url：http://apis.juhe.cn/mobile/get 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求类型：get 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求头参数headers：{"Content-Type": "application/x-www-form-urlencoded"} 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求参数：{"key": "df58e8b03b05f237c38a9e0bdb2bc4bb", "dtype": "json", "phone": 18202759896} 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求响应结果：{'resultcode': '200', 'reason': 'Return Successd!', 'result': {'province': '湖北', 'city': '武汉', 'areacode': '027', 'zip': '430000', 'company': '移动', 'card': ''}, 'error_code': 0} 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求响应JSON提取结果：{'VAR_CITY': '武汉'} 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求响应字段'$..reason'的预期结果：Return Successd! 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求响应字段'$..reason'的实际结果写入excel：Return Successd! 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case2接口请求响应断言成功，写入接口测试结果为'Pass' 
+2024-08-24-01:10:34 test_api.py test_case INFO ————————运行case3————————
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取接口请求id：case3 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case3接口请求名称：城市天气查询接口 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case3接口请求url：https://v1.yiketianqi.com/api 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case3接口请求类型：get 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case3接口请求头参数headers：{"Content-Type": "application/x-www-form-urlencoded"} 
+2024-08-24-01:10:34 test_api.py test_case INFO ✅ 获取case3接口请求参数：{"version": "v61", "appid": "22859479", "appsecret": "xHg4Chou", "city": all_val['VAR_CITY']} 
+2024-08-24-01:10:35 test_api.py test_case INFO ✅ 获取case3接口请求响应结果：{'cityid': '101200101', 'date': '2024-08-24', 'week': '星期六', 'update_time': '00:59', 'city': '武汉', 'cityEn': 'wuhan', 'country': '中国', 'countryEn': 'China', 'wea': '阴', 'wea_img': 'yin', 'tem': '31.3', 'tem1': '37', 'tem2': '28', 'win': '南风', 'win_speed': '2级', 'win_meter': '2km/h', 'humidity': '86%', 'visibility': '17km', 'pressure': '1004', 'air': '30', 'air_pm25': '17', 'air_level': '优', 'air_tips': '空气质量令人满意，基本无空气污染。', 'alarm': {'alarm_type': '', 'alarm_level': '', 'alarm_title': '', 'alarm_content': ''}, 'rain_pcpn': '0', 'uvIndex': '0', 'uvDescription': '低', 'wea_day': '阴', 'wea_day_img': 'yin', 'wea_night': '晴', 'wea_night_img': 'qing', 'sunrise': '05:54', 'sunset': '18:56', 'aqi': {'update_time': '01:08', 'cityid': '101200101', 'city': '武汉市', 'cityEn': '', 'country': '', 'countryEn': '', 'air': '30', 'air_level': '优', 'air_tips': '空气质量令人满意，基本无空气污染。', 'pm25': '17', 'pm25_desc': '优', 'pm10': '30', 'pm10_desc': '优', 'o3': '76', 'o3_desc': '', 'no2': '19', 'no2_desc': '', 'so2': '6', 'so2_desc': '', 'co': '0.6', 'co_desc': '', 'kouzhao': '不用佩戴口罩', 'yundong': '适宜运动', 'waichu': '适宜外出', 'kaichuang': '适宜开窗', 'jinghuaqi': '不需要打开'}} 
+2024-08-24-01:10:35 test_api.py test_case INFO ✅ 获取case3接口请求响应JSON提取结果：{'VAR_CITY': '武汉', 'VAR_TEM': '31.3'} 
+2024-08-24-01:10:35 test_api.py test_case INFO ✅ 获取case3接口请求响应字段'$.countryEn'的预期结果：China 
+2024-08-24-01:10:35 test_api.py test_case INFO ✅ 获取case3接口请求响应字段'$.countryEn'的实际结果写入excel：China 
+2024-08-24-01:10:35 test_api.py test_case INFO ✅ 获取case3接口请求响应断言成功，写入接口测试结果为'Pass' 
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary INFO ————————测试总结————————
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary INFO 成功用例数: 2
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary ERROR 异常用例数: 0
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary ERROR 失败用例数: 0
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary WARNING 跳过用例数: 1
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary WARNING 预期失败用例数: 0
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary WARNING 预期成功用例数: 0
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary INFO 用例执行时长: 1.65s
+2024-08-24-01:10:35 conftest.py pytest_terminal_summary INFO 用例成功率: 100.00%
+2024-08-24-01:10:37 run_tests.py run INFO 运行结束，生成测试报告！

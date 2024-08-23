@@ -7,22 +7,43 @@
 import os
 import time
 import pytest
-from common.config import RunConfig
+from config import RunConfig
+from pathlib import Path
 from utils.LogUtils.log import log
 
 
 @pytest.fixture(scope="session", autouse=True)
 def clear_report():
     try:
-        for one in os.listdir(RunConfig.report_path + 'temp'):
-            if 'json' in one:
-                os.remove(RunConfig.report_path + 'temp' + os.sep + f'{one}')
-            if 'txt' in one:
-                os.remove(RunConfig.report_path + 'temp' + os.sep + f'{one}')
+        for one in Path(RunConfig.report_path, "temp").iterdir():
+            if 'json' or 'txt' in Path(one).suffix:
+                Path(one).unlink()
     except Exception as e:
         log().error("allure数据清除失败", e)
-
     yield
+
+
+# 获取./data目录下所有excel文件路径
+@pytest.fixture(scope="session", autouse=True)
+def excel_data():
+    cases = []
+    # 获取指定路径下所有测试用例excel：在/data/路径下
+    for file in Path(RunConfig.data_path).iterdir():
+        # 保存获取的所有测试用例文件：就是后缀为xlsx的文件
+        # 判断是否为excel
+        if file.suffix == '.xlsx':
+            # 判断是否需要运行该excel文件用例
+            if 'old' not in file.stem:
+                cases.append(str(file))
+        else:
+            log().error('文件类型错误：{}'.format(file))
+    RunConfig.files_path = cases
+
+
+# 参数化获取./data目录下所有excel文件路径
+@pytest.fixture(scope="class", autouse=False, params=RunConfig.files_path)
+def excel_data_path(request):
+    RunConfig.file_path = request.param
 
 
 def pytest_collection_modifyitems(items):

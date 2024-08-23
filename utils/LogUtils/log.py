@@ -6,7 +6,8 @@
 
 import logging
 import time
-from common.config import RunConfig
+from pathlib import Path
+from config import RunConfig
 
 
 def log():
@@ -18,8 +19,8 @@ def log():
         # 创建处理器
         sh = logging.StreamHandler()
         fh = logging.FileHandler(
-            filename='{0}log_{1}'.format(
-                RunConfig.log_path,
+            filename='{0}_{1}'.format(
+                str(Path(RunConfig.log_path, "log")),
                 time.strftime(
                     '%Y_%m_%d_%H_%M_%S',
                     time.localtime())),

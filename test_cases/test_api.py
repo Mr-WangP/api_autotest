@@ -8,26 +8,22 @@ import pytest
 import allure
 from base.method import RunMethod
 from utils.ExcelUtils.excel_utils import GetExcelData
-from common.config import RunConfig
-from utils.FilesUtils.read_conf import ConfigUtil
+from config import RunConfig
 from utils.LogUtils.log import log
-
-
-# 在当前文件中所有用例执行之前执行
-def setup_module():
-    # 定义全局变量
-    global all_val
-    # 参数化变量存储字典
-    all_val = {}
 
 
 @allure.epic('接口自动化测试')
 class Test_Api:
 
-    @pytest.mark.parametrize('args', GetExcelData(RunConfig.data_path).read_excel(),
-                             ids=[*[i[10] for i in GetExcelData(RunConfig.data_path).read_excel()]])
+    # 参数化变量存储字典
+    global all_val
+    all_val = {}
+
+    @pytest.mark.parametrize('args',
+                             GetExcelData(RunConfig.file_path).read_excel(),
+                             ids=[*[i[10] for i in GetExcelData(RunConfig.file_path).read_excel()]])
     def test_case(self, args):
-        log().info("————————case{}————————".format(args[0]))
+        log().info("————————运行case{}————————".format(args[0]))
         # allure报告配置
         allure.dynamic.title(f'{args[10]}')
         allure.dynamic.story(f'{args[13]}')
@@ -64,7 +60,9 @@ class Test_Api:
             # 获取接口请求头参数
             with allure.step('获取接口请求头参数'):
                 headers = args[4]
-                log().info("✅ 获取case{0}接口请求头参数headers：{1} ".format(id, headers))
+                log().info(
+                    "✅ 获取case{0}接口请求头参数headers：{1} ".format(
+                        id, headers))
             # 获取接口请求参数
             with allure.step('获取接口请求参数'):
                 request_data = args[5]
@@ -75,7 +73,9 @@ class Test_Api:
             if headers:
                 # 存在请求参数
                 if request_data:
-                    dict_data = {'url': url, 'headers': eval(args[4]), args[6]: eval(request_data)}
+                    dict_data = {
+                        'url': url, 'headers': eval(
+                            args[4]), args[6]: eval(request_data)}
                 # 不存在请求参数
                 else:
                     dict_data = {'url': url, 'headers': eval(args[4])}
@@ -92,7 +92,10 @@ class Test_Api:
             with allure.step('发送接口请求，获取响应数据'):
                 request_method = args[3] + '_method'
                 res = getattr(RunMethod(), request_method)(**dict_data)
-                log().info("✅ 获取case{0}接口请求响应结果：{1} ".format(id, str(res.json())))
+                log().info(
+                    "✅ 获取case{0}接口请求响应结果：{1} ".format(
+                        id, str(
+                            res.json())))
 
             # JSON提取接口响应数据
             if args[11]:
@@ -108,42 +111,52 @@ class Test_Api:
                     json_exp = json_list[i]
                     value_json = RunMethod().get_text(res.text, json_exp)
                     all_val[key] = value_json
-                log().info("✅ 获取case{0}接口请求响应JSON提取结果：{1} ".format(id, all_val))
+                log().info(
+                    "✅ 获取case{0}接口请求响应JSON提取结果：{1} ".format(
+                        id, all_val))
 
             # 获取接口请求预期结果
             with allure.step('获取接口请求预期结果'):
                 verify_exp = args[7]
                 expect = args[8]
-                log().info("✅ 获取case{0}接口请求响应字段'{1}'的预期结果：{2} ".format(id, verify_exp, expect))
+                log().info(
+                    "✅ 获取case{0}接口请求响应字段'{1}'的预期结果：{2} ".format(
+                        id, verify_exp, expect))
 
             # 向excel中写入响应结果
             with allure.step('向excel中写入响应结果'):
                 verify_json = RunMethod().get_text(res.text, verify_exp)
-                GetExcelData(RunConfig.data_path).write_excel(row + 1, 10, verify_json)
-                log().info("✅ 获取case{0}接口请求响应字段'{1}'的实际结果写入excel：{2} ".format(args[0], verify_exp, verify_json))
+                GetExcelData(
+                    RunConfig.file_path).write_excel(
+                    row + 1, 10, verify_json)
+                log().info(
+                    "✅ 获取case{0}接口请求响应字段'{1}'的实际结果写入excel：{2} ".format(
+                        args[0], verify_exp, verify_json))
 
             # 进行断言，比较接口请求实际结果和预期结果
             with allure.step('进行断言，比较接口请求实际结果和预期结果'):
                 try:
                     assert expect == verify_json
-                    GetExcelData(RunConfig.data_path).pass_(row + 1, col)
-                    log().info("✅ 获取case{0}接口请求响应断言成功，写入接口测试结果为'Pass' ".format(args[0]))
+                    GetExcelData(RunConfig.file_path).pass_(row + 1, col)
+                    log().info(
+                        "✅ 获取case{0}接口请求响应断言成功，写入接口测试结果为'Pass' ".format(
+                            args[0]))
                     return True
-                except:
-                    GetExcelData(RunConfig.data_path).failed_(row + 1, col)
+                except Exception as e:
+                    GetExcelData(RunConfig.file_path).failed_(row + 1, col)
                     log().error("❌ 获取case{0}接口请求响应断言失败，写入接口测试结果为'Failed' ".format(args[0]))
-                    return False
+                    return e
 
         # 判断是否跳过测试，若为no，则跳过该测试请求
         elif args[17].lower() == 'no':
             with allure.step('跳过该接口请求'):
-                GetExcelData(RunConfig.data_path).skip_(row + 1, col)
+                GetExcelData(RunConfig.file_path).skip_(row + 1, col)
                 log().info("✅ 跳过case{0}接口请求，写入接口测试结果为'Skip' ".format(args[0]))
                 pytest.skip("跳过case{0}接口请求".format(args[0]))
 
         # 无法识别是否要运行测试
         else:
-            error_msg = "❌ 无法识别是否要运行测试，请选择是否运行'yes/no' "
+            error_msg = "❌ 无法识别是否要运行测试，请选择是否运行 'yes/no'"
             log().error(error_msg)
 
 

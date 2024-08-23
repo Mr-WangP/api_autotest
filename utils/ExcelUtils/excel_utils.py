@@ -61,9 +61,12 @@ class GetExcelData:
 
 if __name__ == '__main__':
     data = GetExcelData('../../data/api_case.xlsx')
+    print(data.excel)
+    print(type(data.excel))
+    print(data.excel_sheet)
+    print(type(data.excel_sheet))
+    print(data.excel_sheet.cell(1, 1).value)
+    print(data.excel.sheetnames)
+    print(type(data.excel.sheetnames))
     print(data.read_excel())
     print(len(data.read_excel()))
-    # print(data.read_excel()[3])
-    # print("---------")
-    # print(data.read_excel()[3][9])
-    # print(type(data.read_excel()[3][9]))
